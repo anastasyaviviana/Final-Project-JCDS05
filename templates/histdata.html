@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{{url_for('static',filename='home.css')}}"
+    />   
 </head>
 <body>
         <div class="topnav">
@@ -14,33 +18,40 @@
                 <a class="nav-link" href="http://localhost:5000/menuhist">Historical Data</a>
                 <a class="nav-link" href="http://localhost:5000/scoremodel">Score Model</a>
         </div>
-        <div class="tengah">
-                <form class="myForm" method="post" enctype="application/x-www-form-urlencoded" action="http://localhost:5000/histdata">
-                    <fieldset>
-                            <legend>Code of Stock</legend>
-                            <p><label class="choice"> <input type="radio" name="namasaham" required value="BBRI" > BBRI (Bank BRI) </label></p>
-                            <p><label class="choice"> <input type="radio" name="namasaham" required value="BMRI" > BMRI (Bank Mandiri) </label></p>
-                            <p><label class="choice"> <input type="radio" name="namasaham" required value="BBNI" > BBNI (Bank BNI) </label></p>
-                            <p><label class="choice"> <input type="radio" name="namasaham" required value="BBCA" > BBCA (Bank BCA) </label></p>
-                    </fieldset>
-                            <label>From :</label>
-                            <input type="date" name="tanggal1" max={{a}} required>
-                            <label>Until :</label>
-                            <input type="date" name="tanggal2" max={{a}} required>
-                    
-                    <center>
-                    <p><button>Historical Data</button></p>
-                    </center>
-                </form>
+        <div class="container">
+                <div class="atas">
+                        <center>
+                        <h1 style="font-size: larger">Search Historical Data</h1>
+                        </center>
+                </div>
+                <div class="tengah">
+                        <form class="myForm" method="post" enctype="application/x-www-form-urlencoded" action="http://localhost:5000/histdata">
+                        <fieldset>
+                                <legend>Code of Stock</legend>
+                                <p><label class="choice"> <input type="radio" name="namasaham" required value="BBRI" > BBRI (Bank BRI) </label></p>
+                                <p><label class="choice"> <input type="radio" name="namasaham" required value="BMRI" > BMRI (Bank Mandiri) </label></p>
+                                <p><label class="choice"> <input type="radio" name="namasaham" required value="BBNI" > BBNI (Bank BNI) </label></p>
+                                <p><label class="choice"> <input type="radio" name="namasaham" required value="BBCA" > BBCA (Bank BCA) </label></p>
+                        </fieldset>
+                                <label>From :</label>
+                                <input type="date" name="tanggal1" max={{a}} required>
+                                <label>Until :</label>
+                                <input type="date" name="tanggal2" max={{a}} required>
+                        
+                        <center>
+                        <p><button>Historical Data</button></p>
+                        </center>
+                        </form>
+                </div>
         </div>
-        <div>
+        <div class="tengah">
             <center>
                 <h2>
                     <b>Historical Data of {{namasaham}} from {{tgl1}} until {{tgl2}}</b> 
                 </h2>
                     {{tables | safe}}
                     <br>
-                    <img src={{plot}} width="800" height="400">
+                    <img src={{plot}} >
             </center>
 
         </div>

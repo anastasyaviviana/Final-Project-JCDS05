@@ -48,7 +48,7 @@ def post():
     tanggal_predict=str(tahun+'-'+bulan+'-'+tanggal)
 
     #import data stock price
-    real_saham= Fetcher(namasaham+".JK", [2010,1,1], [tahun1,bulan1,tanggal1], interval="1d")
+    real_saham= Fetcher(namasaham+".JK", [2018,1,1], [tahun1,bulan1,tanggal1], interval="1d")
     real_saham=real_saham.getHistorical()
     real_saham=real_saham.iloc[:,0:2]
     real_saham=real_saham.dropna()
