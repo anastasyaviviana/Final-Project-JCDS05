@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+                .topnav {
+                background-color: #333;
+                overflow: hidden;
+                width: 100%;
+                padding: 22px 25px;
+            
+                }
+                .topnav a {
+                float: center;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 22px 25px;
+                text-decoration: none;
+                font-size: 24px;
+                font:bold
+                
+                }
+                .topnav a:hover {
+                background-color:lightgray;
+                color: black;
+               
+                }
+            
+                body{
+                background-image: url("http://tradeonlinemarket.com/wp-content/uploads/2018/03/1_ovAPxu1BrRlLqBAVo57u5g.jpeg");
+                background-attachment: fixed;
+            
+                }
+                .atas{
+                color:white;
+                font-size: 30pt;
+                
+                }
+                .header{
+                color: white;
+                font-size: 25pt
+                }
+                .tengah{
+                width: 600px;margin:0 auto;
+                }
+                .bawah{
+                text-align: center;
+                color:black;
+                font-size: 14pt
+                }
+                .myForm {
+                background:powderblue;
+                background-color: rgba(211, 211, 211, 0.8);    
+                
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                font-size: 16pt;
+                width: 24em;
+                padding: 2em;
+                border: 1px solid #ccc;
+                }
+                .myForm * {
+                box-sizing: border-box;
+                }
+            
+                .myForm fieldset {
+                border: none;
+                padding: 0;
+                }
+            
+                .myForm legend,
+                .myForm label {
+                padding: 0;
+                font-weight: bold;
+                }
+            
+                .myForm label.choice {
+                font-size: 0.9em;
+                font-weight: normal;
+                }
+            
+                .myForm input[type="text"],
+                .myForm select,
+                .myForm textarea {
+                display: block;
+                width: 100%;
+                border: 1px solid #ccc;
+                font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+                font-size: 0.9em;
+                padding: 0.3em;
+                }
+            
+                .myForm textarea {
+                height: 100px;
+                }
+            
+                .myForm button {
+                padding: 1em;
+                border-radius: 0.5em;
+                background: lightcyan;
+                border: none;
+                font-weight: bold;
+                margin-top: 1em;
+                font-size: 17pt;
+                }
+            
+                .myForm button:hover {
+                background:lightblue;
+                cursor: pointer;
+                }
+            </style>
+
+</head>
+<body>
+        <div class="topnav">
+                <a class="nav-link" href="http://localhost:5000/">Home</a>
+                <a class="nav-link" href="http://localhost:5000/prediction">Prediction</a>
+                <a class="nav-link" href="http://localhost:5000/menuhist">Historical Data</a>
+                <a class="nav-link" href="http://localhost:5000/scoremodel">Score Model</a>
+                <a class="nav-link" href="http://localhost:5000/plotdata">Plot Data</a>
+        </div>
+        <div class="container">
+                <div class="atas">
+                        <center>
+                        <h1 style="font-size: larger">Search Historical Data</h1>
+                        </center>
+                </div>
+                <div class="tengah">
+                                <form class="myForm" method="post" enctype="application/x-www-form-urlencoded" action="http://localhost:5000/histdata">
+                                        <fieldset>
+                                                <legend>Code of Stock</legend>
+                                                <p><label class="choice"> <input type="radio" name="namasaham" required value="BBRI" > BBRI (Bank BRI) </label></p>
+                                                <p><label class="choice"> <input type="radio" name="namasaham" required value="BMRI" > BMRI (Bank Mandiri) </label></p>
+                                                <p><label class="choice"> <input type="radio" name="namasaham" required value="BBNI" > BBNI (Bank BNI) </label></p>
+                                                <p><label class="choice"> <input type="radio" name="namasaham" required value="BBCA" > BBCA (Bank BCA) </label></p>
+                                        </fieldset>
+                                                <br>
+                                                <label>From :</label>
+                                                <input type="date" name="tanggal1" max={{a}} required>
+                                                <label>Until :</label>
+                                                <input type="date" name="tanggal2" max={{a}} required>
+                                        
+                                        <center>
+                                        <p><button>Historical Data</button></p>
+                                        </center>
+                                    </form>
+                </div>
+                <div class="bawah"> 
+                        <br><br><br>
+                        <center>
+                        <h5>Anastasya Viviana Gunawan - Final Project JCDS Purwadhika</h5> 
+                        <h6>LSTM Method for Stock Price Prediction </h6> 
+                        </center>
+        
+                </div>
+        </div>
+        
+
+</body>
+</html>

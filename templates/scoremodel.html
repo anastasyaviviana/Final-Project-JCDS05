@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .topnav {
+        background-color: #333;
+        overflow: hidden;
+        width: 100%;
+        padding: 22px 25px;
+
+    
+        }
+        .topnav a {
+        float: center;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 22px 25px;
+        text-decoration: none;
+        font-size: 24px;
+        font:bold
+        
+        }
+        .topnav a:hover {
+        background-color:lightgray;
+        color: black;
+       
+        }
+    
+        body{
+        background-image: url("http://tradeonlinemarket.com/wp-content/uploads/2018/03/1_ovAPxu1BrRlLqBAVo57u5g.jpeg");
+        background-attachment: fixed;
+    
+        }
+        .atas{
+        color:white;
+        font-size: 30pt;
+        
+        }
+        .header{
+        color: white;
+        font-size: 25pt
+        }
+        .tengah{
+        width: 600px;margin:0 auto;
+        }
+        .bawah{
+        text-align: center;
+        color:black;
+        font-size: 14pt
+        }
+        .myForm {
+        background:powderblue;
+        background-color: rgba(211, 211, 211, 0.8);    
+        
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-size: 16pt;
+        width: 24em;
+        padding: 2em;
+        border: 1px solid #ccc;
+        }
+        .myForm * {
+        box-sizing: border-box;
+        }
+    
+        .myForm fieldset {
+        border: none;
+        padding: 0;
+        }
+    
+        .myForm legend,
+        .myForm label {
+        padding: 0;
+        font-weight: bold;
+        }
+    
+        .myForm label.choice {
+        font-size: 0.9em;
+        font-weight: normal;
+        }
+    
+        .myForm input[type="text"],
+        .myForm select,
+        .myForm textarea {
+        display: block;
+        width: 100%;
+        border: 1px solid #ccc;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-size: 0.9em;
+        padding: 0.3em;
+        }
+    
+        .myForm textarea {
+        height: 100px;
+        }
+    
+        .myForm button {
+        padding: 1em;
+        border-radius: 0.5em;
+        background: lightcyan;
+        border: none;
+        font-weight: bold;
+        margin-top: 1em;
+        font-size: 17pt;
+        }
+    
+        .myForm button:hover {
+        background:lightblue;
+        cursor: pointer;
+        }
+    </style>    
+</head>
+<body>
+        <div class="topnav">
+                <a class="nav-link" href="http://localhost:5000/">Home</a>
+                <a class="nav-link" href="http://localhost:5000/prediction">Prediction</a>
+                <a class="nav-link" href="http://localhost:5000/menuhist">Historical Data</a>
+                <a class="nav-link" href="http://localhost:5000/scoremodel">Score Model</a>
+                <a class="nav-link" href="http://localhost:5000/plotdata">Plot Data</a>
+        </div>
+        <div>
+            <center>
+            <p> ----------------------------------------------------------------------------------------------------- </p>
+            <h1>Plot Prediction of Data Testing BBRI</h1>
+            <p> ----------------------------------------------------------------------------------------------------- </p>
+            <img src="/static/images/testing_predict_BBRI.png" alt="BBRI" width="50%" height="auto">
+            <p> ----------------------------------------------------------------------------------------------------- </p>
+            <h1>Plot Prediction of Data Testing BMRI</h1>
+            <p> ----------------------------------------------------------------------------------------------------- </p>
+            <img src="/static/images/testing_predict_BMRI.png" alt="BMRI" width="50%" height="auto">
+            <p> ----------------------------------------------------------------------------------------------------- </p>
+            <h1>Plot Prediction of Data Testing BBNI</h1>
+            <p> ----------------------------------------------------------------------------------------------------- </p>
+            <img src="/static/images/testing_predict_BBNI.png" alt="BBNI" width="50%" height="auto">
+            <p> ----------------------------------------------------------------------------------------------------- </p>
+            <h1>Plot Prediction of Data Testing BBCA</h1>
+            <p> ----------------------------------------------------------------------------------------------------- </p>
+            <img src="/static/images/testing_predict_BBCA.png" alt="BBCA" width="50%" height="auto">
+            </center>
+        </div>
+</body>
+</html>

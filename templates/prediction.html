@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{{url_for('static',filename='home.css')}}"
+    />         
+    
+</head>
+<body>
+    
+    <div class="topnav">
+            <center>
+            <a class="nav-link" href="http://localhost:5000/">Home</a>
+            <a class="nav-link" href="http://localhost:5000/prediction">Prediction</a>
+            <a class="nav-link" href="http://localhost:5000/menuhist">Historical Data</a>
+            <a class="nav-link" href="http://localhost:5000/scoremodel">Score Model</a>
+            <a class="nav-link" href="http://localhost:5000/plotdata">Plot Data</a>
+        </center>
+    </div>
+    
+
+    <div class="container">
+        <div class="atas">
+                <center>
+                <h1 style="font-size: larger">Predict Stock Price of Several Banks on The Next Day</h1>
+                </center>
+        </div>
+        <div class="tengah">
+            <br><br>
+                <form class="myForm" method="post" enctype="application/x-www-form-urlencoded" action="http://localhost:5000/hasilprediksi">
+                    <fieldset>
+                            <legend>Code of Stock</legend>
+                            <p><label class="choice"> <input type="radio" name="namasaham" required value="BBRI" > BBRI (Bank BRI) </label></p>
+                            <p><label class="choice"> <input type="radio" name="namasaham" required value="BMRI" > BMRI (Bank Mandiri) </label></p>
+                            <p><label class="choice"> <input type="radio" name="namasaham" required value="BBNI" > BBNI (Bank BNI) </label></p>
+                            <p><label class="choice"> <input type="radio" name="namasaham" required value="BBCA" > BBCA (Bank BCA) </label></p>
+                    </fieldset>
+                    <p>
+                        <legend>Date of Prediction (except weekends)</legend>
+                            <label>Input date</label>
+
+                            <input type="date" name="tanggal" max={{a}} required>
+                      
+                    
+                    <center>
+                    <p><button>Predict</button></p>
+                    </center>
+                </form>
+                <br>
+        </div>
+        <div class="bawah"> 
+            
+            <center>
+            <h5>Anastasya Viviana Gunawan - Final Project JCDS Purwadhika
+            <p>LSTM Method for Stock Price Prediction </p></h5> 
+            </center>
+
+        </div>
+    </div>
+</body>
+</html>
